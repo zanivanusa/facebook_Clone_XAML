@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="res\Ana.jpg" />
+    <None Remove="res\Bob.jpg" />
+    <None Remove="res\default_image.jpg" />
+    <None Remove="res\eidt.png" />
+    <None Remove="res\logo.webp" />
+    <None Remove="res\objava.jpg" />
+    <None Remove="res\postImage1.jpg" />
+    <None Remove="res\postImage2.jpg" />
+    <None Remove="res\postImage3.jpg" />
+    <None Remove="res\profile_picture.jpg" />
+    <None Remove="res\save_icon.png" />
+    <None Remove="res\sprememba.jpg" />
+    <None Remove="res\Teo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="res\Ana.jpg" />
+    <Resource Include="res\Bob.jpg" />
+    <Resource Include="res\default_image.jpg" />
+    <Resource Include="res\eidt.png" />
+    <Resource Include="res\logo.webp" />
+    <Resource Include="res\objava.jpg" />
+    <Resource Include="res\postImage1.jpg" />
+    <Resource Include="res\postImage2.jpg" />
+    <Resource Include="res\postImage3.jpg" />
+    <Resource Include="res\profile_picture.jpg" />
+    <Resource Include="res\save_icon.png" />
+    <Resource Include="res\sprememba.jpg" />
+    <Resource Include="res\Teo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

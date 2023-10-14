@@ -1,0 +1,46 @@
+﻿<Window x:Class="socialnoOmrezje.AddPostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:socialnoOmrezje"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Socialno Omrežje - dodaj objavo objavo" Height="550" Width="800"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="LightBlue" >
+        <StackPanel Margin="10">
+            <TextBlock Text="Title:"/>
+            <TextBox Name="TitleTextBox"/>
+
+            <TextBlock Text="Content:"/>
+            <TextBox Name="ContentTextBox"/>
+
+            <TextBlock Text="Image Path:"/>
+            <TextBox Name="ImagePathTextBox"/>
+
+            <Button Style="{StaticResource ButtonStyle}" Content="Choose Image" Command="{Binding ChooseImageCommand}"/>
+            <Image Source="{Binding prikazSlike}" Width="200" Height="200" Margin="0,10">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChooseImageCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <TextBlock Text="Author:"/>
+            <TextBox Name="AuthorTextBox"/>
+          
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Save" Margin="220,0,220,0" Command="{Binding SaveCommand}" Width="70"/>
+                <Button Content="Cancel" Command="{Binding CancelCommand}" Height="41" Width="70"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
